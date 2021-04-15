@@ -162,14 +162,14 @@ def evaluate_model(dataset, model, cfg):
 	return mAP
  
 # print(extract_boxes('E:\Stuff\Work\Wekala\Datasets\DOTA\labels/P0000.txt'))
-prev_epoch = r'E:\Stuff\Work\Wekala\DOTA_test\dota_cfg20201230T1045/' + r'mask_rcnn_dota_cfg_0005.h5'
+prev_epoch = r'DOTA_test\dota_cfg20201230T1045/' + r'mask_rcnn_dota_cfg_0005.h5'
 
 train_set = DotaDataset()
-train_set.load_dataset(r'E:\\Stuff\Work\Wekala\Datasets\DOTA/',isTrain=True)
+train_set.load_dataset(r'DOTA/',isTrain=True)
 train_set.prepare()
 print('Train: %d' % len(train_set.image_ids))
 test_set = DotaDataset()
-test_set.load_dataset(r'E:\\Stuff\Work\Wekala\Datasets\DOTA/',isTrain=False)
+test_set.load_dataset(r'DOTA/',isTrain=False)
 test_set.prepare()
 print('Test: %d' % len(test_set.image_ids))
 
